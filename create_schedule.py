@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from __future__ import print_function
 import pickle
 import os.path
@@ -9,9 +11,9 @@ from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 
 import json
-
+KEYWORD='福岡市'
 SCOPES = ['https://www.googleapis.com/auth/calendar']
-CONNPASS = "https://connpass.com/api/v1/event/?event_type=participation&keyword=福岡市"
+CONNPASS = "https://connpass.com/api/v1/event/?event_type=participation&keyword={}".format(KEYWORD)
 
 # 福岡の参加型イベントで一月以内のものを検索
 
